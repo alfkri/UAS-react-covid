@@ -1,8 +1,9 @@
 import DataProv from "../DataProv";
 import StyledProvinsi, { Container } from "./Provinsi.styled";
 
-function Provinsi(props){
-    const {data_prov} = props;
+function Provinsi(){
+//     const {data_prov} = props;
+    const data_prov = useSelector((store)=> store.covid.provinces);
 
     return(
         <StyledProvinsi>
