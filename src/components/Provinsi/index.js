@@ -1,5 +1,6 @@
 import DataProv from "../DataProv";
 import StyledProvinsi, { Container } from "./Provinsi.styled";
+import { useSelector } from "react-redux";
 
 function Provinsi(){
 //     const {data_prov} = props;
