@@ -11,7 +11,7 @@ const covidSlice = createSlice({
         provinces: data.provinces,
     },
     reducers: {
-        reducer: {
+
             updateProvinsi(state, action){
                 const {provinces} = state;
                 const {provinsi, status, jumlah} = action.payload;
