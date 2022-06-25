@@ -11,15 +11,13 @@ const covidSlice = createSlice({
         provinces: data.provinces,
     },
     reducers: {
+                updateProvinsi(state, action){
+                    const {provinces} = state;
+                    const {provinsi, status, jumlah} = action.payload;
 
-            updateProvinsi(state, action){
-                const {provinces} = state;
-                const {provinsi, status, jumlah} = action.payload;
-    
-                const index = provinces.findIndex((item)=> item.kota === provinsi);
-    
-                provinces[index][status] = parseInt(provinces[index][status]) + parseInt(jumlah);
-            }, 
+                    const index = provinces.findIndex((item)=> item.kota === provinsi);
+
+                    provinces[index][status] = parseInt(provinces[index][status]) + parseInt(jumlah);
         },
     },
 });
